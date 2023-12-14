@@ -1,0 +1,32 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Stage 1') {
+            steps {
+                sh 'echo "hello"'
+            }
+        }
+        stage('Stage 2') {
+            steps {
+                sh 'echo "Pract2 >> file.txt"'
+            }
+        }
+        stage('Stage 3') {
+            steps {
+                sh 'cat file.txt'
+            }
+        }
+        stage('Stage 4') {
+            steps {
+                sh 'echo "Hello from GitHub"'
+            }
+        }
+        stage('Stage 5') {
+            steps {
+                sh 'rm file.txt'
+                sh 'cat file.txt'
+            }
+        }
+    }
+}
