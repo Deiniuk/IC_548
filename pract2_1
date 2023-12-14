@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Stage 2') {
             steps {
-                sh 'echo "Pract2 >> file.txt"'
+                sh 'echo "Pract2" >> file.txt'
             }
         }
         stage('Stage 3') {
